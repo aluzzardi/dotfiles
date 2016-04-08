@@ -1,0 +1,22 @@
+[user]
+	email = aluzzardi@gmail.com
+	name = Andrea Luzzardi
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	st = status
+	co = checkout
+	ci = commit -vs
+	br = branch
+	di = diff
+	slog = log --format=oneline
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
