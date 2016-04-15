@@ -4,11 +4,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Editor
+alias vi="vim"
 export EDITOR="vim"
+if [ -x /usr/local/bin/mvim ]; then  # OSX
+	export EDITOR="mvim -v"
+	alias vim="$EDITOR"
+fi
 export VISUAL="$EDITOR"
 export ACK_PAGER_COLOR="less"
-alias vi="vim"
-[ -x /usr/local/bin/mvim ] && alias vim="mvim -v"  # OSX
 
 # Base16 Shell
 # git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
