@@ -2,7 +2,8 @@ DOTFILES=~/.gitconfig \
 		 ~/.zshrc \
 		 ~/.zpreztorc \
 		 ~/.vimrc \
-		 ~/.vim/bundle
+		 ~/.vim/bundle \
+		 ~/.zprezto
 
 .PHONY:all clean
 
@@ -19,3 +20,7 @@ clean:
 ~/.vim/bundle:
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	vim +PluginInstall +PluginClean +qall
+
+# Prezto
+~/.zprezto:
+	git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
