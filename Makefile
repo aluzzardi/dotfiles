@@ -3,7 +3,8 @@ DOTFILES=~/.gitconfig \
 		 ~/.zpreztorc \
 		 ~/.vimrc \
 		 ~/.vim/bundle \
-		 ~/.zprezto
+		 ~/.zprezto \
+		 ~/.config/base16-shell
 
 .PHONY:all clean
 
@@ -24,3 +25,8 @@ clean:
 # Prezto
 ~/.zprezto:
 	git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+
+# Shell colors
+~/.config/base16-shell:
+	git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+	ln -sf ~/.config/base16-shell/scripts/base16-tomorrow-night.sh ~/.base16_theme
