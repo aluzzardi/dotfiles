@@ -39,6 +39,8 @@ set +C
 
 alias gprune="git branch --merged | grep -v \"\*\" | grep -v master | grep -v dev | xargs -n 1 git branch -d"
 
+alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
+
 # Source local settings.
 if [[ -s "${ZDOTDIR:-$HOME}/.zsh.local" ]]; then
   source "${ZDOTDIR:-$HOME}/.zsh.local"
