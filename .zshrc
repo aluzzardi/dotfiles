@@ -23,7 +23,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 [ -d /usr/local/opt/go ] && export GOROOT=/usr/local/opt/go/libexec  # Homebrew
-export PATH=$GOROOT/bin:$GOPATH/bin:/usr/local/bin:$PATH
+export PATH=$GOROOT/bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export GO15VENDOREXPERIMENT=1
 
 # On Ubuntu ack is called ack-grep.
