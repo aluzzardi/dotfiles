@@ -11,7 +11,7 @@
 	ci = commit -vs
 	br = branch
 	di = diff
-	slog = log --format=oneline
+	lg = log --oneline --abbrev-commit --graph --decorate
 [push]
 	default = simple
 [core]
