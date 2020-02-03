@@ -11,7 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kien/ctrlp.vim'
@@ -81,9 +80,7 @@ nnoremap <silent> <C-k> :tabprevious<CR>
 """ Scheme
 
 set background=dark
-let base16colorspace=256
 set t_Co=256
-let g:airline_theme = 'base16'
 
 try
 	colorscheme base16-tomorrow

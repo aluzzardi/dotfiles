@@ -13,6 +13,10 @@ fi
 export VISUAL="$EDITOR"
 export PAGER="less -R"
 export ACK_PAGER_COLOR="$PAGER"
+alias less="less -R"
+
+# Browser
+export BROWSER=firefox
 
 # Base16 Shell
 # git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
@@ -21,18 +25,12 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 # Golang
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/go
-[ -d /usr/local/opt/go ] && export GOROOT=/usr/local/opt/go/libexec  # Homebrew
-export PATH=$GOROOT/bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export GO15VENDOREXPERIMENT=1
+
+# brew has higher priority than $PATH
+export PATH=$HOME/.bin:/usr/local/bin:/usr/local/sbin:$GOPATH/bin:$PATH
 
 # On Ubuntu ack is called ack-grep.
 [ -x /usr/bin/ack-grep ] && alias ack=ack-grep
-
-# Virtual Box
-function startvm() { VBoxManage startvm $1 --type headless; }
-function stopvm() { VBoxManage controlvm "$1" poweroff; }
-function pausevm() { VBoxManage controlvm "$1" savestate; }
 
 # Remove clubber
 set +C
@@ -45,6 +43,8 @@ alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 if [[ -s "${ZDOTDIR:-$HOME}/.zsh.local" ]]; then
   source "${ZDOTDIR:-$HOME}/.zsh.local"
 fi
+
+alias k=kubectl
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/usr/local/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/google-cloud-sdk/path.zsh.inc'; fi
