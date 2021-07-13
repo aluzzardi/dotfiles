@@ -44,6 +44,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zsh.local" ]]; then
   source "${ZDOTDIR:-$HOME}/.zsh.local"
 fi
 
+# Enable buildkit in compose
+export DOCKER_BUILDKIT=1
+export COMPOSE_DOCKER_CLI_BUILD=1
+
 alias k=kubectl
 
 # The next line updates PATH for the Google Cloud SDK.
