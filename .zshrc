@@ -27,7 +27,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 export GOPATH=$HOME/go
 
 # brew has higher priority than $PATH
-export PATH=$HOME/.bin:/usr/local/bin:/usr/local/sbin:$GOPATH/bin:$PATH
+export PATH=$HOME/.bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH
 
 # On Ubuntu ack is called ack-grep.
 [ -x /usr/bin/ack-grep ] && alias ack=ack-grep
