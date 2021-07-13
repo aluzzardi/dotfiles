@@ -35,7 +35,7 @@ export PATH=$HOME/.bin:$GOPATH/bin:/usr/local/bin:/usr/local/sbin:$PATH
 # Remove clubber
 set +C
 
-alias gprune="git branch --merged | grep -v \"\*\" | grep -v master | grep -v production | xargs -n 1 git branch -d"
+alias gprune="git branch --merged | grep -v \"\*\" | grep -v master | grep -v main | grep -v production | xargs -n 1 git branch -d"
 
 alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
 
